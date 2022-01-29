@@ -50,6 +50,8 @@ subdirectories of that directory will be parsed for CMakeLists.txt generation.
 
   Refer cmake documentation [cmake-toolchains(7)](https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html) for the details.
 
+  **For Yocto, see a file such as /opt/windriver/wrlinux/21.20/sysroots/x86_64-wrlinuxsdk-linux/usr/share/cmake/OEToolchainConfig.cmake**
+
   Example:
 
   ```json
