@@ -1,16 +1,23 @@
 #!/usr/bin/env python
 
+# On Ubuntu 18.04 host, works with python 2.7 and possibly 3.x
+
+# Build host needs to install these two python packages:
+# pip install --user jinja2
+# pip install --user walkdir
+
 import sys
 import os
 import argparse
 from jinja2 import Environment, FileSystemLoader
 import json
 import walkdir # https://walkdir.readthedocs.io/en/stable/#
-from . import version
+#from . import version
 
 
 def parseArgs():
-    description = "A python script to generate CMakeLists.txt of a C/C++ project - v{}.".format(version.VERSION)
+    #description = "A python script to generate CMakeLists.txt of a C/C++ project - v{}.".format(version.VERSION)
+    description = "A python script to generate CMakeLists.txt for a C/C++ project tree."
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument('input_dir', help='The base directory of C/C++ project.')
     args = parser.parse_args()
@@ -144,3 +151,4 @@ def main():
 
 if __name__ == '__main__':
     sys.exit(main())
+
